@@ -1,0 +1,66 @@
+# 任务1
+git checkout -b feature-newFunc
+
+git add .
+git commit -m "Added diary entry for feature work"
+git add .
+git commit -m "Added another diary entry for feature work"
+
+git rebase -i HEAD~2
+git push --set-upstream origin feature-newFunc
+git merge feature-newFunc
+git push origin main
+
+
+# 任务2
+git checkout main
+
+git checkout experiment
+git log
+
+git cherry-pick d58314c014e17c0f8091e4f715836e14815e443d
+
+git push origin main
+
+
+# 任务3
+git checkout dev
+git log
+git revert -n 7e9812 1a5d6d
+git add .
+git commit -m "revert"
+git push origin dev
+
+
+# 任务4
+git checkout main
+git add .
+git commit -m "modify the font to times new roman"
+
+git checkout feature-upload
+git diff main feature-upload
+
+git checkout main
+git merge feature-upload
+git add .
+git commit -m "fix conflicts in styles.css"
+git push origin main
+
+# 任务5
+git checkout documentation
+
+git rebase -i HEAD~4
+
+git push -f origin documentation
+
+git chekout main
+git merge documentation
+
+git push origin main
+
+
+
+
+
+
+
